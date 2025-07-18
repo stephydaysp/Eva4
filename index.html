@@ -1,0 +1,67 @@
+!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registro Académico INACAP</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container" role="main">
+    <header>
+      <img src="images/logoinacap.png" alt="Logo INACAP" class="logo" />
+      <h1>Registro Académico</h1>
+    </header>
+
+<form id="formulario" novalidate aria-label="Formulario de registro académico">
+  <fieldset>
+    <legend>Datos del estudiante</legend>
+
+    <label for="fecha">Fecha:</label>
+    <input type="date" id="fecha" name="fecha" required aria-required="true" />
+    <span class="error-message" id="error-fecha" aria-live="polite"></span>
+
+    <label for="rut">RUT:</label>
+    <input type="text" id="rut" name="rut" placeholder="12345678-9" required aria-required="true" />
+    <span class="error-message" id="error-rut" aria-live="polite"></span>
+
+    <label for="apellidos">Apellido(s):</label>
+    <input type="text" id="apellidos" name="apellidos" required aria-required="true" />
+
+    <label for="nombres">Nombre:</label>
+    <input type="text" id="nombres" name="nombres" required aria-required="true" />
+
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" name="correo" required aria-required="true" />
+    <span class="error-message" id="error-correo" aria-live="polite"></span>
+
+    <label for="calificacion">Calificación /100:</label>
+    <input type="number" id="calificacion" name="calificacion" min="1" max="100" required aria-required="true" />
+    <span class="error-message" id="error-calificacion" aria-live="polite"></span>
+
+    <label for="nota">Nota (1.0 a 7.0):</label>
+    <input type="text" id="nota" name="nota" readonly aria-readonly="true" />
+
+    <label for="evaluacion">Evaluación:</label>
+    <textarea id="evaluacion" name="evaluacion" rows="3"></textarea>
+
+    <label for="asignatura">Asignatura:</label>
+    <input type="text" id="asignatura" name="asignatura" required aria-required="true" />
+
+    <label for="curso">Curso:</label>
+    <input type="text" id="curso" name="curso" required aria-required="true" />
+  </fieldset>
+
+  <button type="submit" aria-label="Guardar registro académico">Guardar Registro</button>
+</form>
+
+
+    <section aria-live="polite" aria-atomic="true" aria-relevant="all" id="result-section">
+      <h2>Registros guardados</h2>
+      <pre id="resultado" tabindex="0"></pre>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
